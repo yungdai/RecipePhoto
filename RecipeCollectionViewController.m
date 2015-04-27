@@ -53,6 +53,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
     // Configure the cell
     cell.recipeImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
+    cell.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"photo-frame"]];
     return cell;
 }
 
