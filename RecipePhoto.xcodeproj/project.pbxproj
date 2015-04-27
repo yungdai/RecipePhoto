@@ -11,10 +11,9 @@
 		1AADEB8E1AE7F62D001FDCB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB8D1AE7F62D001FDCB5 /* AppDelegate.m */; };
 		1AADEB911AE7F62D001FDCB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB901AE7F62D001FDCB5 /* ViewController.m */; };
 		1AADEB941AE7F62D001FDCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB921AE7F62D001FDCB5 /* Main.storyboard */; };
+		1AADEB961AE7F62D001FDCB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB951AE7F62D001FDCB5 /* Images.xcassets */; };
 		1AADEB991AE7F62D001FDCB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB971AE7F62D001FDCB5 /* LaunchScreen.xib */; };
 		1AADEBA51AE7F62D001FDCB5 /* RecipePhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEBA41AE7F62D001FDCB5 /* RecipePhotoTests.m */; };
-		1AADEBB21AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEBB11AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m */; };
-		1AADEBB51AE7FB64001FDCB5 /* RecipeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEBB41AE7FB64001FDCB5 /* RecipeCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +35,11 @@
 		1AADEB8F1AE7F62D001FDCB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1AADEB901AE7F62D001FDCB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1AADEB931AE7F62D001FDCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AADEB951AE7F62D001FDCB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AADEB981AE7F62D001FDCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1AADEB9E1AE7F62D001FDCB5 /* RecipePhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AADEBA31AE7F62D001FDCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AADEBA41AE7F62D001FDCB5 /* RecipePhotoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipePhotoTests.m; sourceTree = "<group>"; };
-		1AADEBB01AE7F8F4001FDCB5 /* RecipeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionViewCell.h; sourceTree = "<group>"; };
-		1AADEBB11AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionViewCell.m; sourceTree = "<group>"; };
-		1AADEBB31AE7FB64001FDCB5 /* RecipeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionViewController.h; sourceTree = "<group>"; };
-		1AADEBB41AE7FB64001FDCB5 /* RecipeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +63,6 @@
 		1AADEB7C1AE7F62D001FDCB5 = {
 			isa = PBXGroup;
 			children = (
-				1AADEBAF1AE7F6ED001FDCB5 /* Controllers */,
-				1AADEBAE1AE7F6E5001FDCB5 /* Models */,
 				1AADEB871AE7F62D001FDCB5 /* RecipePhoto */,
 				1AADEBA11AE7F62D001FDCB5 /* RecipePhotoTests */,
 				1AADEB861AE7F62D001FDCB5 /* Products */,
@@ -92,6 +86,7 @@
 				1AADEB8F1AE7F62D001FDCB5 /* ViewController.h */,
 				1AADEB901AE7F62D001FDCB5 /* ViewController.m */,
 				1AADEB921AE7F62D001FDCB5 /* Main.storyboard */,
+				1AADEB951AE7F62D001FDCB5 /* Images.xcassets */,
 				1AADEB971AE7F62D001FDCB5 /* LaunchScreen.xib */,
 				1AADEB881AE7F62D001FDCB5 /* Supporting Files */,
 			);
@@ -122,24 +117,6 @@
 				1AADEBA31AE7F62D001FDCB5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1AADEBAE1AE7F6E5001FDCB5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				1AADEBB01AE7F8F4001FDCB5 /* RecipeCollectionViewCell.h */,
-				1AADEBB11AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		1AADEBAF1AE7F6ED001FDCB5 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				1AADEBB31AE7FB64001FDCB5 /* RecipeCollectionViewController.h */,
-				1AADEBB41AE7FB64001FDCB5 /* RecipeCollectionViewController.m */,
-			);
-			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +201,7 @@
 			files = (
 				1AADEB941AE7F62D001FDCB5 /* Main.storyboard in Resources */,
 				1AADEB991AE7F62D001FDCB5 /* LaunchScreen.xib in Resources */,
+				1AADEB961AE7F62D001FDCB5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,8 +219,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AADEBB21AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m in Sources */,
-				1AADEBB51AE7FB64001FDCB5 /* RecipeCollectionViewController.m in Sources */,
 				1AADEB911AE7F62D001FDCB5 /* ViewController.m in Sources */,
 				1AADEB8E1AE7F62D001FDCB5 /* AppDelegate.m in Sources */,
 				1AADEB8B1AE7F62D001FDCB5 /* main.m in Sources */,
@@ -442,7 +418,6 @@
 				1AADEBAA1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		1AADEBAB1AE7F62D001FDCB5 /* Build configuration list for PBXNativeTarget "RecipePhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -451,7 +426,6 @@
 				1AADEBAD1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
