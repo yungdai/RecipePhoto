@@ -11,7 +11,6 @@
 		1AADEB8E1AE7F62D001FDCB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB8D1AE7F62D001FDCB5 /* AppDelegate.m */; };
 		1AADEB911AE7F62D001FDCB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB901AE7F62D001FDCB5 /* ViewController.m */; };
 		1AADEB941AE7F62D001FDCB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB921AE7F62D001FDCB5 /* Main.storyboard */; };
-		1AADEB961AE7F62D001FDCB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB951AE7F62D001FDCB5 /* Images.xcassets */; };
 		1AADEB991AE7F62D001FDCB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AADEB971AE7F62D001FDCB5 /* LaunchScreen.xib */; };
 		1AADEBA51AE7F62D001FDCB5 /* RecipePhotoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEBA41AE7F62D001FDCB5 /* RecipePhotoTests.m */; };
 		1AADEBB21AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEBB11AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m */; };
@@ -37,7 +36,6 @@
 		1AADEB8F1AE7F62D001FDCB5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1AADEB901AE7F62D001FDCB5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1AADEB931AE7F62D001FDCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1AADEB951AE7F62D001FDCB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1AADEB981AE7F62D001FDCB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1AADEB9E1AE7F62D001FDCB5 /* RecipePhotoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePhotoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AADEBA31AE7F62D001FDCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 				1AADEB8F1AE7F62D001FDCB5 /* ViewController.h */,
 				1AADEB901AE7F62D001FDCB5 /* ViewController.m */,
 				1AADEB921AE7F62D001FDCB5 /* Main.storyboard */,
-				1AADEB951AE7F62D001FDCB5 /* Images.xcassets */,
 				1AADEB971AE7F62D001FDCB5 /* LaunchScreen.xib */,
 				1AADEB881AE7F62D001FDCB5 /* Supporting Files */,
 			);
@@ -227,7 +224,6 @@
 			files = (
 				1AADEB941AE7F62D001FDCB5 /* Main.storyboard in Resources */,
 				1AADEB991AE7F62D001FDCB5 /* LaunchScreen.xib in Resources */,
-				1AADEB961AE7F62D001FDCB5 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +442,7 @@
 				1AADEBAA1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AADEBAB1AE7F62D001FDCB5 /* Build configuration list for PBXNativeTarget "RecipePhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +451,7 @@
 				1AADEBAD1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
