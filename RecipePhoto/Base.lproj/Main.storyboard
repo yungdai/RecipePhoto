@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MCw-91-VUU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Recipe Photo-->
@@ -25,12 +26,18 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyQ-Qs-3Mi">
-                                            <rect key="frame" x="5" y="8" width="90" height="72"/>
+                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyQ-Qs-3Mi">
+                                            <rect key="frame" x="5" y="8" width="90" height="71"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="MyQ-Qs-3Mi" firstAttribute="leading" secondItem="GnA-j4-o6h" secondAttribute="leadingMargin" constant="-3" id="N8g-nO-aSX"/>
+                                    <constraint firstItem="MyQ-Qs-3Mi" firstAttribute="top" secondItem="GnA-j4-o6h" secondAttribute="topMargin" constant="-2" id="P20-eh-suq"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="MyQ-Qs-3Mi" secondAttribute="bottom" constant="15" id="gQr-sf-9ps"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="MyQ-Qs-3Mi" secondAttribute="trailing" constant="-3" id="jMb-B6-4wm"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="recipeImageView" destination="MyQ-Qs-3Mi" id="7e0-4z-8GW"/>
                                 </connections>
