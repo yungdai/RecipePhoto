@@ -11,6 +11,9 @@
 #import "RecipeCollectionViewCell.h"
 // import the RecipeCollectionHeaderView Model to the RecipeCollectionViewController
 #import "RecipeCollectionHeaderView.h"
+#import "RecipeViewController.h"
+#import <Social/Social.h>
+
 
 
 @interface RecipeCollectionViewController ()
@@ -20,6 +23,10 @@
 @implementation RecipeCollectionViewController {
     //declare an array for the recipeImages;
     NSArray *recipeImages;
+    
+    // added two new variables to multitouch selection
+    BOOL shareEnabled;
+    NSMutableArray *selectedRecipes;
 }
 
 static NSString * const reuseIdentifier = @"Cell";
@@ -45,6 +52,9 @@ static NSString * const reuseIdentifier = @"Cell";
     // adding section spacing
     UICollectionViewFlowLayout *collectionViewLayout =  (UICollectionViewFlowLayout *) self.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(20, 0, 20, 0);
+    
+    // initialise the selectedRecipes array
+    selectedRecipes = [NSMutableArray array];
 
 <<<<<<< HEAD
 
@@ -55,6 +65,25 @@ static NSString * const reuseIdentifier = @"Cell";
 =======
 >>>>>>> Chapter-16
 }
+
+// impliment a method for multiselection
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (shareEnabled) {
+        // Determine the selected items by using the indexPath
+        NSString *selectedRecipe = [recipeImages[indexPath.section]objectAtIndex:indexPath.row];
+        //add the selected item to the array
+        [selectedRecipes addObject:selectedRecipe];
+    }
+}
+
+// impliment a method for deselection of a photo
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if (shareEnabled) {
+        NSString *deSelectedRecipe = [recipeImages[indexPath.section]objectAtIndex:indexPath.row];
+        [selectedRecipes removeObject:deSelectedRecipe];
+    }
+}
+
 
 // implement the viewForSupplementaryElementOfKind: method
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
@@ -121,9 +150,24 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.recipeImageView.image = [UIImage imageNamed:[recipeImages[indexPath.section]objectAtIndex:indexPath.row]];
 >>>>>>> Chapter-16
     
+    // insert in the photo frame selection code
+    
+    cell.selectedBackgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"photo-frame-selected"]];
+    
     return cell;
 }
 
+
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showRecipePhoto"]) {
+        NSArray *indexPaths = [self.collectionView indexPathsForSelectedItems];
+        UINavigationController *destViewController = segue.destinationViewController;
+        RecipeViewController *recipeViewController = (RecipeViewController *) [destViewController.childViewControllers firstObject];
+        NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+        recipeViewController.recipeImageName = [recipeImages[indexPath.section]objectAtIndex:indexPath.row];
+        [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+    }
+}
 #pragma mark <UICollectionViewDelegate>
 
 /*
@@ -155,4 +199,47 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 */
 
+- (IBAction)shareButtonTapped:(id)sender {
+    if (shareEnabled) {
+        // Post selected photos to Facebook
+        if ([selectedRecipes count] > 0) {
+            if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+                SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                [controller setInitialText:@"Check out my recipes!"];
+                for (NSString *recipePhoto in selectedRecipes) {
+                    [controller addImage:[UIImage imageNamed:recipePhoto]];
+                }
+                [self presentViewController:controller animated:YES completion:nil];
+            }
+        }
+        // Deselect all selected items
+        for (NSIndexPath *indexPath in self.collectionView.indexPathsForSelectedItems) {
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        }
+        
+        // Remove all items from selectedRecipes array
+        [selectedRecipes removeAllObjects];
+        // Change the sharing mode to NO
+        shareEnabled = NO;
+        self.collectionView.allowsMultipleSelection = NO;
+        self.shareButton.title = @"Share";
+        [self.shareButton setStyle:UIBarButtonItemStylePlain];
+    } else {
+        // Change shareEnabled to YES and change the button text to Upload
+        shareEnabled = YES;
+        self.collectionView.allowsMultipleSelection = YES;
+        self.shareButton.title = @"Upload";
+        [self.shareButton setStyle:UIBarButtonItemStyleDone];
+    }
+    
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if (shareEnabled) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
 @end

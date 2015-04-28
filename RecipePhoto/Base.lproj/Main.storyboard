@@ -45,6 +45,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="recipeImageView" destination="MyQ-Qs-3Mi" id="7e0-4z-8GW"/>
+                                    <segue destination="Uw4-xy-yKK" kind="modal" identifier="showRecipePhoto" id="kqQ-5T-lPo"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -86,11 +87,59 @@
                             <outlet property="delegate" destination="Ylz-Hx-LX6" id="hev-PB-YfH"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Recipe Photo" id="3E7-Gc-8AU"/>
+                    <navigationItem key="navigationItem" title="Recipe Photo" id="3E7-Gc-8AU">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="V1T-9N-hdc">
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="Ylz-Hx-LX6" id="14r-wS-ThK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="shareButton" destination="V1T-9N-hdc" id="gkA-00-OdL"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="laL-O4-Zi5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1319" y="505"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="JiI-qr-7w6">
+            <objects>
+                <viewController id="WDh-9g-BEF" customClass="RecipeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jZ0-2P-lci"/>
+                        <viewControllerLayoutGuide type="bottom" id="nqp-Pd-CVC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9E9-V4-Sce">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XA7-cQ-adZ">
+                                <rect key="frame" x="140" y="64" width="320" height="200"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XA7-cQ-adZ" secondAttribute="trailing" id="7bA-hA-uxf"/>
+                            <constraint firstItem="nqp-Pd-CVC" firstAttribute="top" secondItem="XA7-cQ-adZ" secondAttribute="bottom" constant="336" id="TRc-0f-E5E"/>
+                            <constraint firstItem="XA7-cQ-adZ" firstAttribute="leading" secondItem="9E9-V4-Sce" secondAttribute="leadingMargin" id="ril-I2-Ynt"/>
+                            <constraint firstItem="XA7-cQ-adZ" firstAttribute="top" secondItem="jZ0-2P-lci" secondAttribute="bottom" id="sHg-TU-Miz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Photo" id="zgn-d9-sez">
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="O1V-XA-OOI">
+                            <connections>
+                                <action selector="close:" destination="WDh-9g-BEF" id="21Z-jF-tqe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="recipeImageView" destination="XA7-cQ-adZ" id="gTc-Xc-DkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WS8-5n-gj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2765" y="508"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QZ9-Jn-lJ8">
@@ -109,6 +158,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uw6-NB-Czn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="507" y="505"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jW8-dX-v7T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uw4-xy-yKK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="Photo" id="opB-3z-Vpc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WDh-9g-BEF" kind="relationship" relationship="rootViewController" id="z3M-KH-Dm9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kId-VU-lp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2078" y="505"/>
         </scene>
     </scenes>
     <resources>
