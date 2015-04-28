@@ -175,6 +175,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (IBAction)shareButtonTapped:(id)sender {
     if (shareEnabled) {
         // Post selected photos to Facebook
+        
+        // read page 207 of the iOS 8 book to see the breakdown of how this code works.
         if ([selectedRecipes count] > 0) {
             if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
                 SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
