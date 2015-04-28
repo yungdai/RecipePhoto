@@ -56,14 +56,6 @@ static NSString * const reuseIdentifier = @"Cell";
     // initialise the selectedRecipes array
     selectedRecipes = [NSMutableArray array];
 
-<<<<<<< HEAD
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-=======
->>>>>>> Chapter-16
 }
 
 // impliment a method for multiselection
@@ -110,32 +102,13 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 
-<<<<<<< HEAD
-    return 1;
-=======
+
     return [recipeImages count];
->>>>>>> Chapter-16
+
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-<<<<<<< HEAD
-    
-    // Return the amount of pictures from the recipesImages array
-    return recipeImages.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    // use the RecipeCollViewCell cell to count how many cells will be in the view.
-    RecipeCollectionViewCell *cell = (RecipeCollectionViewCell *) [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell
-    cell.recipeImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
-    
-    // add in the backgroundView image file for for each picture
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"photo-frame"]];
-=======
     // method to return the number of items for each section in the array within the array
     return [[recipeImages objectAtIndex:section]count];
 }
@@ -148,7 +121,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     // rewrite of the cell image view into groups
     cell.recipeImageView.image = [UIImage imageNamed:[recipeImages[indexPath.section]objectAtIndex:indexPath.row]];
->>>>>>> Chapter-16
+
     
     // insert in the photo frame selection code
     
