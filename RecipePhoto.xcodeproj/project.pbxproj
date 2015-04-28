@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A4E06ED1AEEB8A500B657C1 /* RecipeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E06EC1AEEB8A500B657C1 /* RecipeCollectionHeaderView.m */; };
-		1A4E06F91AF0246700B657C1 /* RecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4E06F81AF0246700B657C1 /* RecipeViewController.m */; };
 		1AADEB8B1AE7F62D001FDCB5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB8A1AE7F62D001FDCB5 /* main.m */; };
 		1AADEB8E1AE7F62D001FDCB5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB8D1AE7F62D001FDCB5 /* AppDelegate.m */; };
 		1AADEB911AE7F62D001FDCB5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AADEB901AE7F62D001FDCB5 /* ViewController.m */; };
@@ -31,10 +29,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A4E06EB1AEEB8A500B657C1 /* RecipeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeCollectionHeaderView.h; sourceTree = "<group>"; };
-		1A4E06EC1AEEB8A500B657C1 /* RecipeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeCollectionHeaderView.m; sourceTree = "<group>"; };
-		1A4E06F71AF0246700B657C1 /* RecipeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipeViewController.h; sourceTree = "<group>"; };
-		1A4E06F81AF0246700B657C1 /* RecipeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipeViewController.m; sourceTree = "<group>"; };
 		1AADEB851AE7F62D001FDCB5 /* RecipePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AADEB891AE7F62D001FDCB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AADEB8A1AE7F62D001FDCB5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,10 +132,6 @@
 			children = (
 				1AADEBB01AE7F8F4001FDCB5 /* RecipeCollectionViewCell.h */,
 				1AADEBB11AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m */,
-				1A4E06EB1AEEB8A500B657C1 /* RecipeCollectionHeaderView.h */,
-				1A4E06EC1AEEB8A500B657C1 /* RecipeCollectionHeaderView.m */,
-				1A4E06F71AF0246700B657C1 /* RecipeViewController.h */,
-				1A4E06F81AF0246700B657C1 /* RecipeViewController.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -256,11 +246,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AADEBB21AE7F8F4001FDCB5 /* RecipeCollectionViewCell.m in Sources */,
-				1A4E06ED1AEEB8A500B657C1 /* RecipeCollectionHeaderView.m in Sources */,
 				1AADEBB51AE7FB64001FDCB5 /* RecipeCollectionViewController.m in Sources */,
 				1AADEB911AE7F62D001FDCB5 /* ViewController.m in Sources */,
 				1AADEB8E1AE7F62D001FDCB5 /* AppDelegate.m in Sources */,
-				1A4E06F91AF0246700B657C1 /* RecipeViewController.m in Sources */,
 				1AADEB8B1AE7F62D001FDCB5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +446,6 @@
 				1AADEBAA1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		1AADEBAB1AE7F62D001FDCB5 /* Build configuration list for PBXNativeTarget "RecipePhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -467,7 +454,6 @@
 				1AADEBAD1AE7F62D001FDCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
